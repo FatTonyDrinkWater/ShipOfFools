@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="logo">
+              <img class="logo__group" src="Group.svg" alt="" />
+              <img src="TOXIN.svg" alt="" />
+            </div>
+            <nav class="menu">
+              <a class="menu__link link active" href="">О нас</a>
+              <a class="menu__link link icon" href="">Услуги</a>
+              <a class="menu__link link" href="">Вакансии</a>
+              <a class="menu__link link" href="">Новости</a>
+              <a class="menu__link link icon" href="">Соглашения</a>
+            </nav>
+            <div class="actions">
+              <button class="button button__login">Войти</button>
+              <button class="button button__signup">Зарегистрироваться</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <div class="container">
+          <div class="main__inner">
+            <div class="form form__quicksearch">
+              <div class="title">Найдём номера под ваши пожелания</div>
+              <form action="/" method="POST">
+                <div class="form-row">
+                  <div class="form__element short">
+                    <label class="form__label short" for="in">Прибытие</label>
+                    <input
+                      class="form__input"
+                      id="in"
+                      type="text"
+                      placeholder="ДД.ММ.ГГГГ"
+                    />
+                  </div>
+                  <div class="form__element short">
+                    <label class="form__label short" for="out">Выезд</label>
+                    <input
+                      class="form__input"
+                      id="out"
+                      type="text"
+                      placeholder="ДД.ММ.ГГГГ"
+                    />
+                  </div>
+                </div>
+                <div class="form-el">
+                  <label class="form__label long" for="guests">Гости</label>
+                  <input
+                    class="form__input"
+                    id="guests"
+                    type="text"
+                    placeholder="Сколько гостей?"
+                  />
+                </div>
+                <button class="button button__getnumber">
+                  подобрать номер
+                </button>
+              </form>
+            </div>
+            <div class="text">
+              Лучшие номера для вашей работы, отдыха и просто вдохновения
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__column a">
+              <div class="logo footer__logo">
+                <img class="logo__group" src="Group.svg" alt="" />
+                <img src="TOXIN.svg" alt="" />
+              </div>
+              <h2 class="footer_title">
+                Бронирование номеров в лучшем отеле 2019 года по версии
+                ассоциации «Отельные взгляды»
+              </h2>
+            </div>
+            <div class="footer__column b">
+              <h2 class="label">Навигация</h2>
+              <a href="" class="link">О нас</a>
+              <a href="" class="link">Новости</a>
+              <a href="" class="link">Служба поддержки</a>
+              <a href="" class="link">Услуги</a>
+            </div>
+            <div class="footer__column c">
+              <h2 class="label">О нас</h2>
+              <a href="" class="link">О сервисе</a>
+              <a href="" class="link">Наша команда</a>
+              <a href="" class="link">Вакансии</a>
+              <a href="" class="link">Инвесторы</a>
+            </div>
+            <div class="footer__column d">
+              <h2 class="label">Служба поддержки</h2>
+              <a href="" class="link">Соглашения</a>
+              <a href="" class="link">Сообщества</a>
+              <a href="" class="link">Связь с нами</a>
+            </div>
+            <div class="footer__column e">
+              <h2 class="label">Подписка</h2>
+              <h2 class="footer_title">
+                Получайте специальные предложения и новости сервиса
+              </h2>
+              <input type="email" class="input" placeholder="Email" />
+            </div>
+          </div>
+          <div class="copyright">
+            <h2 class="link">
+              Copyright © 2018 Toxin отель. Все права зачищены.
+            </h2>
+            <div class="img">
+              <img class="img" src="tw.svg" alt="" class="icons" />
+              <img class="img" src="fb.svg" alt="" class="icons" />
+              <img class="img" src="inst.svg" alt="" class="icons" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

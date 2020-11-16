@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="logo">
+            <img class="logo__group" src="Group.svg" alt="" />
+            <img src="TOXIN.svg" alt="" />
+          </div>
+          <nav class="menu">
+            <a class="menu__link link active" href="">О нас</a>
+            <a class="menu__link link icon" href="">Услуги</a>
+            <a class="menu__link link" href="">Вакансии</a>
+            <a class="menu__link link" href="">Новости</a>
+            <a class="menu__link link icon" href="">Соглашения</a>
+          </nav>
+          <div class="actions">
+            <button class="button button__login">Войти</button>
+            <button class="button button__signup">Зарегистрироваться</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-a">
+      <div class="container">
+        <div class="main-a-inner">
+          <div class="main__search">
+            <form class="form" action="/" method="post">
+              <div class="form__element">
+                <label for="" class="form__label">Даты пребывания в отеле</label>
+                <input class="form__input" type="text" placeholder="19 авг - 24 авг" />
+              </div>
+              <div class="form__element">
+                <label for="" class="form__label">Гости</label>
+                <input class="form__input" type="text" placeholder="3 гостя, 1 младенец" />
+              </div>
+              <div class="form__element">
+                <label class="form__label">Checkbox buttons</label>
+                <div class="checkbox__element">
+                  <input class="" id="smoking" type="checkbox" placeholder="3 гостя, 1 младенец" />
+                  <label for="smoking" class="checkbox__label">Можно курить</label>
+                </div>
+                <div class="checkbox__element">
+                  <input class="" id="pets" type="checkbox" placeholder="3 гостя, 1 младенец" />
+                  <label for="pets" class="checkbox__label">Можно с питомцами</label>
+                </div>
+                <div class="checkbox__element">
+                  <input class="" id="party" type="checkbox" placeholder="3 гостя, 1 младенец" />
+                  <label for="party" class="checkbox__label">Можно пригласить гостей(до 10 человек)</label>
+                </div>
+              </div>
+              <div class="form__element">
+                <label class="form__label">доступность</label>
+                <div class="checkbox__element">
+                  <input class="" id="hallway" type="checkbox" />
+                  <label for="hallway" class="checkbox__label">Широкий коридор</label>
+                  <p class="subtext">Ширина коридоров в номере не менее 91 см.</p>
+                </div>
+                <div class="checkbox__element">
+                  <input class="" id="help" type="checkbox" placeholder="3 гостя, 1 младенец" />
+                  <label for="help" class="checkbox__label">Помощник для инвалидов</label>
+                  <p class="subtext">На 1 этаже вас встретит специалист и проводит до номера.</p>
+                </div>
+              </div>
+              <div class="form__element">
+              </div>
+              <div class="form__element">
+                <label for="" class="form__label">Удобства номера</label>
+                <input class="form__input" type="text" placeholder="2 спальни, 3 кровти" />
+              </div>
+              <div class="form__element">
+                <label for="" class="form__label">Дополнительные удобства</label>
+              </div>
+            </form>
+          </div>
+          <div class="rooms">
+            <h2 class="title">Номера, которые мы для вас подобрали</h2>
+            <div class="rooms__table">
+              <div class="room">
+                <img src="room1.jpg" alt="">
+                <div class="info">
+                  <h2>№ 888</h2>
+                    <h3>люкс</h3>
+                    <p>9906р в сутки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__column a">
+          <div class="logo footer__logo">
+            <img class="logo__group" src="Group.svg" alt="" />
+            <img src="TOXIN.svg" alt="" />
+          </div>
+          <h2 class="footer_title">
+            Бронирование номеров в лучшем отеле 2019 года по версии
+            ассоциации «Отельные взгляды»
+          </h2>
+        </div>
+        <div class="footer__column b">
+          <h2 class="label">Навигация</h2>
+          <a href="" class="link">О нас</a>
+          <a href="" class="link">Новости</a>
+          <a href="" class="link">Служба поддержки</a>
+          <a href="" class="link">Услуги</a>
+        </div>
+        <div class="footer__column c">
+          <h2 class="label">О нас</h2>
+          <a href="" class="link">О сервисе</a>
+          <a href="" class="link">Наша команда</a>
+          <a href="" class="link">Вакансии</a>
+          <a href="" class="link">Инвесторы</a>
+        </div>
+        <div class="footer__column d">
+          <h2 class="label">Служба поддержки</h2>
+          <a href="" class="link">Соглашения</a>
+          <a href="" class="link">Сообщества</a>
+          <a href="" class="link">Связь с нами</a>
+        </div>
+        <div class="footer__column e">
+          <h2 class="label">Подписка</h2>
+          <h2 class="footer_title">
+            Получайте специальные предложения и новости сервиса
+          </h2>
+          <input type="email" class="input" placeholder="Email" />
+        </div>
+      </div>
+      <div class="copyright">
+        <h2 class="link">
+          Copyright © 2018 Toxin отель. Все права зачищены.
+        </h2>
+        <div class="img">
+          <img class="img" src="tw.svg" alt="" class="icons" />
+          <img class="img" src="fb.svg" alt="" class="icons" />
+          <img class="img" src="inst.svg" alt="" class="icons" />
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
