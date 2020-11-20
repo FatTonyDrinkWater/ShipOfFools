@@ -169,3 +169,92 @@ console.log(letters);
 //JOIN ------------------------------------------------------------------------
 // Получить строку с разделителим, или запятой
 console.log(letters.join("-"));
+
+const account3 = {
+  owner: "Steven Thomas Williams",
+  movements: [200, -200, 340, -300, -20, 50, 400, -460],
+  interestRate: 0.7,
+  pin: 3333,
+};
+
+const account4 = {
+  owner: "Sarah Smith",
+  movements: [430, 1000, 700, 50, 90],
+  interestRate: 1,
+  pin: 4444,
+};
+
+const accounts = [account3, account4];
+
+// MAP -----------------------------------------------------------------
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const eurToUsd = 1.1;
+const movementsUsd = movements.map(function (cur) {
+  return cur * eurToUsd;
+});
+
+// FILTER -------------------------------------------------------------------
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(movements);
+
+function isIsogram(str) {
+  let a = str.split(" ");
+  let b = a.filter((item, pos, arr) => {
+    arr.indexOf(item) == pos;
+  });
+  let c = b.length == str.length;
+  return c;
+  return (
+    str.split("").filter((item, pos, arr) => arr.indexOf(item) == pos).length ==
+    str.length
+  );
+}
+console.log(isIsogram("thomas"));
+console.log(isIsogram("moses"));
+
+// REDUCE -------------------------------------------------------------------
+const balance = movements.reduce(function (accum, cur, i, arr) {
+  return accum + cur;
+}, 0); // можно не указывать
+
+// FIND ---------------------------------------------------------------------
+const firstWithdrawal = movements.find((mov) => mov < 0); // TRUE or FALSE (1st satsfies)
+console.log(movements);
+console.log(firstWithdrawal);
+
+const account = accounts.find((acc) => acc.owner === "Sarah Smith");
+console.log(account);
+
+//FindIndex-----------------------------------------------------------------
+
+// Some and Every--------------------------------------------------------------
+//Equality
+console.log(movements.includes(-130));
+// Condition
+const anyDeps = movements.some((mov) => mov > 5000);
+console.log(anyDeps);
+
+// EVERY---------------------------------------------------------------------
+console.log(movements.every((mov) => move > 0));
+
+//Flat
+// Removed nested NICE
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+const arrDeep = [[1, 2, [3, 4], 3], [4, 5, 6], 7, 8];
+console.log(arrDeep.flat(2));
+
+// Strings sorting // MUTATE the original ARRAY bc // Alphabetic auto.
+const owners = ["Jonas", "Zach", "Adam", "Martha"];
+console.log(owners.sort());
+
+// Numbers sorting
+console.log(movements.sort());
+// Return < 0 A,B (and reverse)
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (b > a) return -1;
+});
+console.log(movements);
