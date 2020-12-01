@@ -3,19 +3,72 @@
 // const yetMoreNumbers = Array.of(1, 2);
 
 //Array methods
-const hobbies = ["Sports", "Drinking"];
-hobbies.push("Reading"); // Добавляет в конец
-hobbies.unshift("Coding"); // Добавляет элемент в начало
-const poppedValue = hobbies.pop(); // Удаляет последний элемент
-hobbies.shift(); // удаляет первый элемент
-console.log(hobbies[2]); // index access
-console.log(hobbies.length); // 3=3 = 0,1,2
-console.log(hobbies[hobbies.length - 1]); // get last element 3-1= 2 index
-console.log(hobbies.indexOf("Drinking"));
-console.log(hobbies.includes("Drinking"));
+const animals = ["Monkey", "Shark", 'Bear', 'Rabbit'];
+// Добавить элемент в конец массива
+animals.push("Reading");
+
+// Удалить последний элемент массива
+const poppedValue = animals.pop();
+
+// Добавить элемент в начало массива
+animals.unshift("Coding");
+
+// Удалить первый элемент массива
+animals.shift();
+
+//Получить элемент массива по Индексу
+console.log(animals[2]);
+
+// Получить Длину Массива
+console.log(animals.length); // 3=3 = 0,1,2
+
+// Получить последний элемент массива
+console.log(animals[animals.length - 1]); // get last element 3-1= 2 index
+
+// Получить индекс Элемента
+console.log(animals.indexOf("Drinking"));
+
+// Есть ли элемент в массиве?
+console.log(animals.includes("Drinking")); // BOOLEAN
+
+// Вернуть новый массив содержащий копию части исходного массива
+animals.slice(1); // Вернуть первый элемент
+animals.slice(1,3); // Вернет 3 элемента начиная с индека 1
+animals.slice() // Просто копия массива
+
+// Удалить существующий элемент или заменить его MUTATE
+animals.splice(1,1); // Удалить начиная с i 1, 1 элемент. Ретурн содержит массив удаленных элементов
+// Заменить элемент массива
+animals.splice(0,1, 'CAT');
+
+//CONCAT Объединить 2 массива в один.
+const arr1 = [1,2,3,4]
+const arr2 = [5,6,7,8]
+const arr3 = arr1.concat(arr2);
+const arr4 = [...arr1, ...arr2]; // spread op
+
+
+// REVERSE Изменяет порядок следования элементов массива на месте
+let arr2 = ["h", "e", "l", "l", "o"];
+arr2.reverse();
+
+//JOIN Объединяет все элемента массива или МПО в строку
+const numbers = [1, 2, 3, 4,];
+console.log(numbers.join("-")); // ()-1,2,3,4 || ('') - 1234 || ('SEP') - 1SEP2SEP
+
+
+// FIND возвращает значение первого найденного в массиве элемента, которое удовлетворяет условию переданному в cbf
+const arr = [1,2,3,4,5,6,7,7,8]
+const firstWithdrawal = arr.find(el => el > 4) // Удовлетворяет условие значит тру и возвращается элемент
+console.log(firstWithdrawal);
+
+// FILTER создает новый массив со всеми элементами прошедшими проверку задаваем в cbf
+// Массив всех вхождений
+const arr1 = arr.filter(el => el > 0);
+console.log(arr1);
+
 
 //Nested arrays
-
 const listItems = document.querySelectorAll("li");
 console.log(listItems); // node-list (i and length)
 const arrayListItems = Array.from(listItems); // Делает еррей-лайк и итерабл в настоящий АРРЕЙ
@@ -34,8 +87,7 @@ for (const data of analyticsData) {
   }
 }
 
-hobbies.splice(0, 0, "Good food"); // REAL ARRAY ONLY...
-console.log(hobbies);
+
 
 const testResults = [1, 5.3, 1.5, 10.99, 1.5, -5, 10];
 // const storedResults = testResults.slice(0, 2); // новый массив с темы же данными, а не ссылка. со слайсем
@@ -52,15 +104,18 @@ const prices = [10, 20, 30, 45];
 const tax = 0.19;
 const taxAdjustedPrices = [];
 
-for (const value of prices) {
-  taxAdjustedPrices.push(value * (1 + tax));
-}
-console.log(taxAdjustedPrices);
+// for (const value of prices) {
+//   taxAdjustedPrices.push(value * (1 + tax));
+// }
+// console.log(taxAdjustedPrices);
 
 prices.forEach((price, i, prices) => {
   const priceObj = { index: i, taxAdjustedPrices: price * (1 + tax) };
   taxAdjustedPrices.push(priceObj);
 });
+
+const persons = [`Владислав`, `Святослав`, `Ярослав`, `Демид`];
+persons.forEach((person, i) => console.log(`${i + 1} в списке идёт ${person}`));
 
 // shorter alternative MAP 8.13
 
@@ -113,16 +168,7 @@ const sum = prices.reduce((preValue, curValue, curIndex, prices) => {
   return preValue + curValue;
 }, 0);
 
-// STRINGS split() join()
 
-const data = "newyork;10.99;2000";
-
-const transformedData = data.split(";");
-console.log(transformedData);
-
-const nameFragments = ["Max", "Smith"];
-const name = nameFragments.join(" ");
-console.log(name);
 
 // The Spread Operator
 const nameFragments = ["Max", "Smith"];
@@ -141,91 +187,19 @@ const numbers = [1, 2, 3];
 const [firstNum, secondNum, ...otherNums] = numbers;
 console.log(firstNum, otherNums);
 
-// Maps and sets
-
-/////////////////////////////////////////////////
-
-let arr = ["a", "b", "c", "d", "e"];
-console.log(arr.slice(2));
-console.log(arr.slice(2, 4)); // 4-2 = 2 элемента. Сам 2 и 3
-console.log(arr.slice(-2)); // last 2 elements of array
-console.log(arr.slice()); // Копия. Либо спред. Без разницы
-
-//SPLICE-----------------------------------------------------------------------
-console.log(arr.splice(2)); // Удаляет элементы изменя ориг. массив ( со 2 и)
-
-/// REVERSE ------------------------------------------------------------------
-// Разворот на 180. Мьютейт оригинал массив
-let arr2 = ["h", "e", "l", "l", "o"];
-console.log(arr2.reverse());
-
-// CONCAT ----------------------------------------------------
-// Объединить 2 массива в один
-// НЕ мутирует ор. массивы
-const letters = arr.concat(arr2);
-// Или [...arr, ...arr2]
-console.log(letters);
-
-//JOIN ------------------------------------------------------------------------
-// Получить строку с разделителим, или запятой
-console.log(letters.join("-"));
-
-const account3 = {
-  owner: "Steven Thomas Williams",
-  movements: [200, -200, 340, -300, -20, 50, 400, -460],
-  interestRate: 0.7,
-  pin: 3333,
-};
-
-const account4 = {
-  owner: "Sarah Smith",
-  movements: [430, 1000, 700, 50, 90],
-  interestRate: 1,
-  pin: 4444,
-};
-
-const accounts = [account3, account4];
-
 // MAP -----------------------------------------------------------------
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const eurToUsd = 1.1;
-const movementsUsd = movements.map(function (cur) {
-  return cur * eurToUsd;
-});
+const movementsUsd = movements.map(cur => cur * eurToUsd);
+};
 
-// FILTER -------------------------------------------------------------------
-const deposits = movements.filter(function (mov) {
-  return mov > 0;
-});
-console.log(movements);
 
-function isIsogram(str) {
-  let a = str.split(" ");
-  let b = a.filter((item, pos, arr) => {
-    arr.indexOf(item) == pos;
-  });
-  let c = b.length == str.length;
-  return c;
-  return (
-    str.split("").filter((item, pos, arr) => arr.indexOf(item) == pos).length ==
-    str.length
-  );
-}
-console.log(isIsogram("thomas"));
-console.log(isIsogram("moses"));
 
 // REDUCE -------------------------------------------------------------------
-const balance = movements.reduce(function (accum, cur, i, arr) {
-  return accum + cur;
-}, 0); // можно не указывать
+const balance = movements.reduce((accum, cur, i, arr) => accum + cur, 0);
+console.log(balance);
 
-// FIND ---------------------------------------------------------------------
-const firstWithdrawal = movements.find((mov) => mov < 0); // TRUE or FALSE (1st satsfies)
-console.log(movements);
-console.log(firstWithdrawal);
 
-const account = accounts.find((acc) => acc.owner === "Sarah Smith");
-console.log(account);
 
 //FindIndex-----------------------------------------------------------------
 
@@ -237,7 +211,7 @@ const anyDeps = movements.some((mov) => mov > 5000);
 console.log(anyDeps);
 
 // EVERY---------------------------------------------------------------------
-console.log(movements.every((mov) => move > 0));
+console.log(movements.every((mov) => mov > 0));
 
 //Flat
 // Removed nested NICE
@@ -246,9 +220,6 @@ console.log(arr.flat());
 const arrDeep = [[1, 2, [3, 4], 3], [4, 5, 6], 7, 8];
 console.log(arrDeep.flat(2));
 
-// Strings sorting // MUTATE the original ARRAY bc // Alphabetic auto.
-const owners = ["Jonas", "Zach", "Adam", "Martha"];
-console.log(owners.sort());
 
 // Numbers sorting
 console.log(movements.sort());

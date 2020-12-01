@@ -109,3 +109,17 @@ console.log(maskCreditCard(345678920));
 //Repeat
 const message2 = "Bad weather.. All departues Delayed.... ";
 console.log(message2.repeat(5));
+// SPLIT() ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const data = "newyork;10.99;2000";
+
+const transformedData = data.split(";");
+console.log(transformedData);
+
+const nameFragments = ["Max", "Smith"];
+const name = nameFragments.join(" ");
+console.log(name);
+
+// Strings sorting // MUTATE the original ARRAY bc // Alphabetic auto.
+const owners = ["Jonas", "Zach", "Adam", "Martha"];
+console.log(owners.sort());
